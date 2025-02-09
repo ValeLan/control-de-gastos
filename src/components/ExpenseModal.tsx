@@ -10,7 +10,7 @@ export default function ExpenseModal() {
 
     return (
         <>
-            <div className="fixed right-5 bottom-5 flex items-center justify-center">
+            <div className="fixed right-5 bottom-5 flex items-center justify-center z-50">
                 <button
                     type="button"
                     onClick={() => dispatch({type:'show-modal'})}
@@ -20,7 +20,7 @@ export default function ExpenseModal() {
             </div>
 
             <Transition appear show={state.modal} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={() => { dispatch({type:'close-modal'})}}>
+                <Dialog as="div" className="relative z-10 h-auto" onClose={() => { dispatch({type:'close-modal'})}}>
                     <TransitionChild
                         as={Fragment}
                         enter="ease-out duration-300"
